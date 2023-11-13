@@ -1,11 +1,9 @@
-package com.anuar;
+package com.anuar.dao;
 
-import java.sql.Timestamp;
 import java.util.List;
 
-import com.anuar.Task;
-import com.anuar.TaskDAO;
-import org.hibernate.Session;
+import com.anuar.beans.Task;
+import com.anuar.dao.TaskDAO;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate5.HibernateTemplate;

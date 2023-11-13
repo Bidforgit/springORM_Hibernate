@@ -1,4 +1,4 @@
-package com.anuar;
+package com.anuar.context;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

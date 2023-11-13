@@ -1,17 +1,14 @@
 package com.anuar;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import com.anuar.TaskDAOImpl;
+import com.anuar.beans.Task;
+import com.anuar.context.ContextProvider;
+import com.anuar.dao.TaskDAO;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import javax.swing.*;
 import java.sql.Timestamp;
 import java.util.Scanner;
 
-public class MainForTasks {
+public class TaskManager {
 
 
     public static void main(String[] args) {
@@ -27,8 +24,6 @@ public class MainForTasks {
         System.out.println("5 to EXIT");
         int a = sc.nextInt();
 
-
-
         switch (a){
             case 1:
                 String name = sc.next();
@@ -41,12 +36,12 @@ public class MainForTasks {
                 break;
             case 2:
                 System.out.println("id:");
-              int id = sc.nextInt();
-              Task task1 = taskDAO.getTask(id);
-              task1.setName(sc.next());
-              task1.setDescription(sc.next());
-              task1.setStatus(sc.next());
-              taskDAO.update(task1);
+                int id = sc.nextInt();
+                Task task1 = taskDAO.getTask(id);
+                task1.setName(sc.next());
+                task1.setDescription(sc.next());
+                task1.setStatus(sc.next());
+                taskDAO.update(task1);
                 break;
             case 3:
                 System.out.println("id:");

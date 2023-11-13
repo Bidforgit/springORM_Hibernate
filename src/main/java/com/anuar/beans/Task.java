@@ -1,4 +1,4 @@
-package com.anuar;
+package com.anuar.beans;
 
 
 import lombok.NoArgsConstructor;

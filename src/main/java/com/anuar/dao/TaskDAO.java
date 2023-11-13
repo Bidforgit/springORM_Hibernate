@@ -1,6 +1,7 @@
-package com.anuar;
+package com.anuar.dao;
 
-import java.sql.Timestamp;
+import com.anuar.beans.Task;
+
 import java.util.List;
 
 public interface TaskDAO {
